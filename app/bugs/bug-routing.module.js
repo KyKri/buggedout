@@ -20,7 +20,9 @@ var BugRoutingModule = (function () {
         core_1.NgModule({
             imports: [
                 router_1.RouterModule.forChild([
-                    { path: 'bugs', component: bug_list_component_1.BugListComponent }
+                    { path: '', redirectTo: 'bugs', pathMatch: 'full' },
+                    { path: 'bugs', component: bug_list_component_1.BugListComponent },
+                    { path: '**', redirectTo: 'bugs' }
                 ])
             ],
             exports: [router_1.RouterModule]
